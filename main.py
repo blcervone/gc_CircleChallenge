@@ -51,7 +51,7 @@ while grow_circle:
         circle1.grow()
         print_info(circle1)
     elif ask_grow == 'n':
-        print("Goodbye!")
+        print(f"Goodbye!\nFinal radius value: {circle1.get_radius()}")
         grow_circle = False
     else:
         print("Invalid response!")
