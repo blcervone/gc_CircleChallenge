@@ -25,6 +25,13 @@
 
 from circle_class import *
 
+
+def print_info(circle):
+    print(f"Diameter: {circle.calculate_diameter()}")
+    print(f"Circumference: {circle.calculate_circumference()}")
+    print(f"Area: {circle.calculate_area()}")
+
+
 valid_input = False
 while not valid_input:
     try:
@@ -34,9 +41,7 @@ while not valid_input:
         print("Please enter a valid number value!")
 
 circle1 = Circle(radius_dbl)
-print(f"Diameter: {circle1.calculate_diameter()}")
-print(f"Circumference: {circle1.calculate_circumference()}")
-print(f"Area: {circle1.calculate_area()}")
+print_info(circle1)
 
 grow_circle = True
 while grow_circle:
@@ -44,9 +49,7 @@ while grow_circle:
     if ask_grow == 'y':
         print("Standby while your circle magically grows...")
         circle1.grow()
-        print(f"Diameter: {circle1.calculate_diameter()}")
-        print(f"Circumference: {circle1.calculate_circumference()}")
-        print(f"Area: {circle1.calculate_area()}")
+        print_info(circle1)
     elif ask_grow == 'n':
         print("Goodbye!")
         grow_circle = False
